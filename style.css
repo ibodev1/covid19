@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-snap-align: start;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  background: #eee;
+}
+
+.nav-menu {
+  width: 100%;
+  height: auto;
+  background: #212121;
+  color: #14ffec;
+  padding: 7px;
+  justify-content: space-between;
+  display: flex;
+  transition: height 1s ease-in-out;
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-menu ul li {
+  display: flex;
+  color: #14ffec;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  color: #14ffec;
+  padding: 10px 14px;
+  margin: 0px 10px;
+  border: solid 1.5px #14ffec;
+  border-radius: 50px;
+  transition: 300ms all;
+}
+
+.nav-menu ul li a:hover {
+  background: #14ffec;
+  color: #212121;
+}
+
+.sabit-baslik {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #323232;
+  color: white;
+  height: auto;
+  padding: 2px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.kutular {
+  display: grid;
+  grid-row: 2;
+  grid-template-columns: 400px 400px;
+  align-items: center;
+  justify-content: center;
+}
+
+.kutu {
+  display: block;
+  position: relative;
+  margin: 15px;
+  max-width: 400px;
+  height: 230px;
+  border: 5px solid #0d7377;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 25px -5px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 2px 2px 25px -5px rgba(0, 0, 0, 0.6);
+  box-shadow: 2px 2px 25px -5px rgba(0, 0, 0, 0.6);
+  transition: 300ms all;
+}
+
+.kutu .baslik {
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+  border-bottom: 5px solid #0d7377;
+  transition: 300ms all;
+  color: #0d7377;
+}
+
+.kutu:hover {
+  transform: scale(1.02);
+}
+
+.kutu:hover .baslik {
+  background: #0d7377;
+  color: #fff;
+}
+
+.kutu .sayi {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 45px;
+}
+
+.footer {
+  background: #212121;
+  color: #999999;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.nav-menu .menu-btn {
+  display: none;
+}
+
+.yukari-cik {
+  display: none;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  font-size: 35px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .kutular {
+    grid-row: 1;
+    grid-template-columns: 380px;
+  }
+  .nav-menu {
+    display: block;
+    height: 50px;
+    overflow: hidden;
+  }
+  .nav-menu ul {
+    display: block;
+  }
+  
+  .nav-menu ul li {
+    display: flex;
+    margin: 15px 0px;
+  }
+  .nav-menu .menu-btn {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .aktif {
+    height: auto;
+  }
+}
